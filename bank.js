@@ -41,10 +41,16 @@ class Bank {
             window.location.href = "bankuserinterface.html"
         }
         else if(user==0){
-            alert("Password does not Match")
+            let ilab = document.querySelector("#pinvalid")
+            ilab.textContent = "the password entered does not match the username"
+            ilab.style.color = "red"
+            //alert("Password does not Match")
         }
         else if(user==-1){
-            alert("No Username found Matching !!")
+            let ulab = document.querySelector("#uinvalid")
+            ulab.textContent = "invalid username, pleae enter a valid username"
+            ulab.style.color = "red"
+            //alert("No Username found Matching !!")
         }
 
         // let dataset = Bank.getAccountDetails();
@@ -78,10 +84,16 @@ class Bank {
             alert("Your account has been credited with " + amt + "  New balance: " + dataset[uname].balance)
         }
         else if(user==0){
-            alert("Password does not Match")
+            let ilab = document.querySelector("#pinvalid")
+            ilab.textContent = "the password entered does not match the username"
+            ilab.style.color = "red"
+            // alert("Password does not Match")
         }
         else if(user==-1){
-            alert("No Username found Matching !!")
+            let ulab = document.querySelector("#uinvalid")
+            ulab.textContent = "invalid username, pleae enter a valid username"
+            ulab.style.color = "red"
+            //alert("No Username found matching !!!")
         }
 
         // let dataset = Bank.getAccountDetails();
@@ -112,14 +124,20 @@ class Bank {
         let user=Bank.authenticateUser(uname,pwd)
         let dataset = Bank.getAccountDetails();
         if(user==1){
-            dataset[uname].balance += 5000;
+            dataset[uname].balance -= 5000;
             alert(amt + " has been debited from your account." + "  New balance: " + dataset[uname].balance)
         }
         else if(user==0){
-            alert("Password does not Match")
+            let ilab = document.querySelector("#pinvalid")
+            ilab.textContent = "the password entered does not match the username"
+            ilab.style.color = "red"
+            //alert("Password does not Match")
         }
         else if(user==-1){
-            alert("No Username found Matching !!")
+            let ulab = document.querySelector("#uinvalid")
+            ulab.textContent = "invalid username, pleae enter a valid username"
+            ulab.style.color = "red"
+            //alert("No Username found matching !!!")
         }
 
         // if (uname in dataset) {

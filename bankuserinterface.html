@@ -9,36 +9,65 @@
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <script src="bank.js"></script>
+    <style>
+        body {
+          background-image:  url('bglogin.jpg');
+          background-size: 100% 150%;
+        }
+        h2{
+            font-family: 'Acme', sans-serif;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Audiowide&family=Oxygen:wght@700&family=Redressed&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
-    <h2 style="margin-top: 3%; color: blue;">Welcome to National Bank's User Homepage - Make your Transaction</h2>
+    <nav class="navbar navbar-expand-lg fixed-top" style="background-color: rgba(255, 255, 255, 0.5)">
+        <a class="navbar-brand" href="#">
+            <img src="C:\Users\Lenovo\Desktop\Luminar Technolab Joseph\Bank Application\background.jpg" width="200"
+                height="40"  alt=""></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="banklogin.html">HOME <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <h2 style="margin-top: 8%; margin-left: 2%; color: rgb(0, 0, 0);">Welcome to NATIONAL BANK's User Homepage - Make your Transaction</h2>
     <br><br>
     <div class="container">
         <form action="">
 
             <div class="form-group">
-                <label for="">Username</label>
+                <label for="" style="color: white;">Username</label>
                 <input type="text" id="username" style="width: 40%;" class="form-control">
                 <label for="" id="uinvalid"></label>
             </div>
 
             <div class="form-group">
-                <label for="">Password</label>
+                <label for="" style="color: white;">Password</label>
                 <input type="password" id="pwd" style="width: 40%;" class="form-control">
                 <label for="" id="pinvalid"></label>
             </div>
 
             <div class="form-group">
-                <label for="">Amount</label>
+                <label for="" style="color: white;">Amount</label>
                 <input type="number" id="amt" style="width: 40%;" class="form-control">
             </div>
 
 
-            <button type="button" style="width: 200px;" onclick="Bank.deposit()"
+            <button type="button" style="width: 200px; color: white;" onclick="Bank.deposit()"
                 class="btn btn-outline-primary">Deposit</button>
-            <button type="button" style="width: 200px; margin-left: 3%;" onclick="Bank.withdrawal()"
+            <button type="button" style="width: 200px; margin-left: 3%; color: white;" onclick="Bank.withdrawal()"
                 class="btn btn-outline-secondary">Withdraw</button>
 
         </form>
